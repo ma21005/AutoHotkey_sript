@@ -11,11 +11,52 @@ Ctrl::
         IsAltTabMenu := true
     }
     return
+
+; Ctrlを押しながらJを連打する度にArrowLeft
+^j::
+    Send {Left}
+    return
+
+; Ctrlを押しながらIを連打する度にArrowUp
+^i::
+    Send {Up}
+    return
+
+; Ctrlを押しながらLを連打する度にArrowRight
+^l::
+    Send {Right}
+    return
+
+; Ctrlを押しながらKを連打する度にArrowDown
+^k::
+    Send {Down}
+    return
+
+; Ctrl + , でBackspace
+^,::
+    Send {Backspace}
+    return
+
+; Ctrl + U でHome
+^u::
+    Send {Home}
+    return
+
+; Ctrl + O でEnd
+^o::
+    Send {End}
+    return
+
+; Ctrl + Shift + U でShift + Home (行頭まで選択)
+^+u::
+    Send +{Home}
+    return
+
 #If (IsAltTabMenu)
     j::Send {Left}
-    l::Send {Right}
-    i::Send {Up}
     k::Send {Down}
+    i::Send {Up}
+    l::Send {Right}
     Enter::
         Send {Enter}
         IsAltTabMenu := false
