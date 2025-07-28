@@ -1,5 +1,3 @@
-# AutoHotkey Scripts Collection
-
 AutoHotkeyスクリプトを管理するリポジトリ
 
 ## Files
